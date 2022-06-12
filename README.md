@@ -1,2 +1,2 @@
-# goit-markup-hw-05
-Репозиторий для сдачи ДЗ по модулю 5
+# goit-markup-hw-02
+Homework-02/15.05.2022
