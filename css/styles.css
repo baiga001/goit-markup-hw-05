@@ -50,7 +50,18 @@ body{
     color: #2196F3;
 }
 .navigation .link-current{
+    position: relative;
     color: #2196F3;
+}
+.link-current::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196F3;
+    bottom: 0px;
 }
 .hero-section-btn {
     font-family: inherit;
@@ -297,9 +308,31 @@ body{
     margin-right: -30px;
 }
 .our-job-section-list-item{
+    position: relative;
     display: block;
     margin-right: 30px;
     flex-basis: calc((100% - 90px) / 3);
+}
+.our-job-section-dsc{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+}
+.our-job-section-dsc-text{
+    font-family: var(--main-font)
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
 /* =============== /ЧЕМ МЫ ЗАНИМАЕМСЯ =============== */
 
@@ -602,6 +635,8 @@ body{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 500ms linear,
+    visibility 500ms linear;
 }
 .hero-section-modal{
     width: 528px;
@@ -625,5 +660,10 @@ body{
     border-radius: 50%;
     background: #FFFFFF;
     cursor: pointer;
+}
+.hero-section-blackout.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 /* =============== /МОДАЛЬНОЕ ОКНО =============== */
